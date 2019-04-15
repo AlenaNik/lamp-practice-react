@@ -7,11 +7,14 @@ class Lamp extends Component {
             on: false
         };
     }
+    handleClick = () => {
+        this.setState({ on: !this.state.on });
+    };
     render() {
         const light = this.props.on ? 'on': 'off';
         return (
             <div className="Lamp">
-                <button onClick={() => alert("Button clicked")} className={light}>{light.toUpperCase()}</button>
+                <button onClick={this.handleClick} className={light}>{light.toUpperCase()}</button>
                 <figure className={light} />
             </div>
         );
