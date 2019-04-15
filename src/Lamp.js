@@ -4,7 +4,7 @@ class Lamp extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            on: false
+            on: this.props.on
         };
     }
     handleClick = () => {
